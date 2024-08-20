@@ -2,21 +2,20 @@ import Header from '@/components/Header';
 import Image from 'next/image';
 import Link from 'next/link';
 import '@/app/globals.css';
-import { usePathname } from 'next/navigation';
+import { ReactNode } from 'react';
 
-export default function RootLayout({
-  children,
-  hero,
-}:
-  {
-    children: React.ReactNode;
-    hero?: React.ReactNode;
-  }) {
+interface RootLayoutProps {
+  children: ReactNode;
+  hero?: ReactNode;
+}
+
+export default function RootLayout({ children, hero }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className="bg-gray-100 text-gray-900">
         <Header />
-        {children}
+        {hero && <div className="hero-section">{hero}</div>}
+        <main>{children}</main>
         <footer className="bg-slate-blue text-white p-4 text-center">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -47,4 +46,3 @@ export default function RootLayout({
     </html>
   );
 }
-
