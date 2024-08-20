@@ -59,15 +59,22 @@ export default function HomePage() {
 
       {/* Content Section */}
       <section className="container mx-auto py-12">
-        <h2 className="text-3xl font-bold text-center mb-6">About the Book</h2>
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-lg text-gray-700 mb-6">
-            "From Generative AI to Ubuntu: A Vision for Zimbabwe’s Technological Renaissance" explores the intersection of advanced technology and cultural wisdom. This book dives deep into how the principles of Ubuntu can guide the integration of Generative AI in ways that are sustainable, ethical, and rooted in African values.
+          Hello, I’m Isaiah Munyaradzi Bizabani—a technology expert specializing in Generative AI, DevOps, and Cloud Computing. Over the years, I’ve worked with various global brands and founded several successful ventures, including Netonline Media Limited, Netonline Limited Zimbabwe, and Netonline Global Limited. My passion lies in harnessing cutting-edge technology to solve real-world problems and contribute to the advancement of my native Zimbabwe.
+          </p>
+          <h2 className="text-3xl font-bold text-center mb-6">About the Book</h2>
+          <p className="text-lg text-gray-700 mb-6">
+          <strong>From Generative AI to Ubuntu: A Vision for Zimbabwe’s Technological Renaissance</strong> is my latest book, which delves into the intersection of advanced technology and cultural wisdom. In this book, I explore how the principles of Ubuntu can guide the integration of Generative AI in ways that are sustainable, ethical, and rooted in African values.
           </p>
           <p className="text-lg text-gray-700 mb-6">
-            Join Isaiah Bizabani on this journey of innovation and cultural revival, and discover how the future of AI and Ubuntu can create a better world for all.
+          Through in-depth research and case studies, I offer a unique perspective on how Africa, particularly Zimbabwe, can lead in the global technological landscape by blending innovation with tradition. This book is not just for tech enthusiasts, but also for those interested in cultural studies, sustainable development, and the future of Africa.
           </p>
-          <Link href="/contact" className="mt-8 bg-warm-gold text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition-transform transform hover:scale-105 duration-300">
+          <h2 className="text-3xl font-bold text-center mb-6">Stay Connected</h2>
+          <p className="text-lg text-gray-700 mb-6">
+          I’m excited to share this journey with you. Whether you’re here to learn more about my book, explore the latest insights on technology and Ubuntu, or simply connect, I invite you to stay updated by subscribing to my newsletter.
+          </p>
+          <Link href="/book" className="mt-8 bg-warm-gold text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition-transform transform hover:scale-105 duration-300">
             Contact Me for More Information
           </Link>
         </div>
