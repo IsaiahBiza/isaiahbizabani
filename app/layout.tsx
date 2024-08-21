@@ -6,10 +6,8 @@ import { usePathname } from "next/navigation";
 
 export default function RootLayout({
   children,
-  hero,
 }: {
   children: React.ReactNode;
-  hero?: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -41,7 +39,10 @@ export default function RootLayout({
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
-              <Link href="/contact" className="text-gray-400 hover:text-white">
+              <Link
+                href="/contact"
+                className="text-gray-400 hover:text-white"
+              >
                 Contact Me
               </Link>
             </div>
@@ -75,3 +76,4 @@ export default function RootLayout({
     </html>
   );
 }
+
