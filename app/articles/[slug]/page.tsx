@@ -4,9 +4,16 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import { notFound } from 'next/navigation';
+import { GetServerSideProps } from 'next';
+
+interface Params {
+  params: {
+    slug: string;
+  };
+}
 
 // Make the component function async
-const ArticlePage = async ({ params }) => {
+const ArticlePage = async ({ params }: Params) => {
   const { slug } = params;
   const articlePath = path.join(process.cwd(), 'content', `${slug}.md`);
 
