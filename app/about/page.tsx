@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className="bg-gray-100 text-gray-900">

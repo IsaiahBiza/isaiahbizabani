@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Header from "@/components/Header";
+import { usePathname } from "next/navigation";
 export default function SnippetsPage() {
   return (
     <div className="container mx-auto py-12">

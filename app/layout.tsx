@@ -39,17 +39,14 @@ export default function RootLayout({
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
-              <Link
-                href="/contact"
-                className="text-gray-400 hover:text-white"
-              >
+              <Link href="/contact" className="text-gray-400 hover:text-white">
                 Contact Me
               </Link>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
               <Link
-                href="https://www.linkedin.com/in/netonlineglobal/"
+                href="https://www.linkedin.com/in/isaiahbizabani/"
                 className="text-gray-400 hover:text-white block mb-2"
               >
                 LinkedIn
@@ -76,4 +73,3 @@ export default function RootLayout({
     </html>
   );
 }
-
