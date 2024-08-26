@@ -26,10 +26,26 @@ export default function HomePage() {
   };
 
   // Handle form submission
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    // Handle form submission logic here
-    setSubmitted(true);
+
+    try {
+      const response = await fetch("/api/sendEmail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        console.error("Failed to send email");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   };
 
   return (
@@ -224,7 +240,7 @@ export default function HomePage() {
             developments.
           </p>
           {submitted ? (
-            <p className="text-green-200 text-center">
+            <p className="text-green-500 text-center">
               Thank you for subscribing! You'll hear from us soon.
             </p>
           ) : (

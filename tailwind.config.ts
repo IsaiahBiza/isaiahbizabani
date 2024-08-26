@@ -29,6 +29,10 @@ const config: Config = {
         'muted-grey': '#767676',
         'bermuda': '#78dcca',
       },
+      screens: {
+        'xs': '480px', // Extra small screen
+        '3xl': '1920px', // Very large screen
+      },
     },
   },
   plugins: [require('@tailwindcss/typography')],
