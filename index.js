@@ -1,22 +1,35 @@
 // Import required modules
-
+const express = require('express');
+const next = require('next');
 const path = require('path');
 
-// Create an instance of an Express server
-const app = express();
+// Determine if we are in development or production
+const dev = process.env.NODE_ENV !== 'production';
+const app = next({ dev });
+const handle = app.getRequestHandler();
 
-// Define the port
-const PORT = process.env.PORT || 3000;
+// Prepare the Next.js app
+app.prepare().then(() => {
+  const server = express();
 
-// Serve static files from the 'public' directory
-app.use(express.static(path.join(__dirname, 'public')));
+  // Serve static files from the 'public' directory
+  server.use(express.static(path.join(__dirname, 'public')));
 
-// Handle the root route
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  // Handle all other routes with Next.js
+  server.get('*', (req, res) => {
+    return handle(req, res);
+  });
+
+  // Fallback 404 handler
+  server.use((req, res) => {
+    res.status(404).send('Page Not Found');
+  });
+
+  // Define the port and start the server
+  const PORT = process.env.PORT || 3000;
+  server.listen(PORT, (err) => {
+    if (err) throw err;
+    console.log(`Server is running on port ${PORT}`);
+  });
 });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
