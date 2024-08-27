@@ -77,10 +77,10 @@ export default function HomePage() {
       </section>
 
       {/* Content Section */}
-      <section className="container mx-auto py-12">
-        <div className="max-w-3xl mx-auto text-center">
+      <section className="container mx-auto py-12 p-6">
+        <div className="max-w-3xl mx-auto text-justify">
           <p className="text-lg text-gray-700 mb-6">
-            Hello, I’m Isaiah Munyaradzi Bizabani—a technology expert
+            Hello, I’m Isaiah Munyaradzi Bizabani, a technology expert
             specializing in Generative AI, DevOps, and Cloud Computing. Over the
             years, I’ve worked with various global brands and founded several
             successful ventures, including Netonline Media Limited, Netonline
@@ -118,12 +118,14 @@ export default function HomePage() {
             and Ubuntu, or simply connect, I invite you to stay updated by
             subscribing to my newsletter.
           </p>
-          <Link
-            href="/book"
-            className="mt-8 bg-warm-gold text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition-transform transform hover:scale-105 duration-300"
-          >
-            About The Book
-          </Link>
+          <div className="flex justify-center items-center h-full">
+            <Link
+              href="/book"
+              className="mt-8 bg-warm-gold text-white px-6 py-3 rounded-lg hover:bg-yellow-600 transition-transform transform hover:scale-105 duration-300"
+            >
+              About The Book
+            </Link>
+          </div>
         </div>
       </section>
 

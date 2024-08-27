@@ -3,13 +3,13 @@ import Header from "@/components/Header";
 import { usePathname } from "next/navigation";
 export default function SnippetsPage() {
   return (
-    <div className="container mx-auto py-12">
+    <div className="container mx-auto py-12 p-6">
       <h1 className="text-4xl font-bold mb-8">Book Progress</h1>
       <p className="text-lg text-gray-700">
         Explore snippets and stages of the book's development.
       </p>
       
-      <section className="bg-white py-12">
+      <section className="bg-white py-12 p-6">
         <div className="max-w-3xl">
           <h2 className="text-4xl font-bold mb-6">Book Progress Update</h2>
           <p className="text-gray-700 mb-4"><strong>Date:</strong> 18 August 2024</p>

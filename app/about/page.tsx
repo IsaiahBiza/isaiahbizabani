@@ -10,7 +10,7 @@ export default function AboutPage() {
       </section>
 
       {/* Content Section */}
-      <section className="container mx-auto py-12">
+      <section className="container mx-auto py-12 p-6">
         <h2 className="text-3xl font-bold text-center mb-6">My Journey</h2>
         <div className="max-w-3xl mx-auto text-justified">
         <p className="text-lg text-gray-700 mb-6">
