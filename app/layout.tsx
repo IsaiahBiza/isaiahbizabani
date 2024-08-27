@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "@/app/globals.css";
 import { usePathname } from "next/navigation";
+import Head from './head';
 
 export default function RootLayout({
   children,
@@ -11,6 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head />
       <body className="bg-gray-100 text-gray-900">
         <Header />
         {children}
