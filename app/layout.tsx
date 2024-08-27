@@ -19,7 +19,7 @@ export default function RootLayout({
             <div>
               <h4 className="text-lg font-semibold mb-4">About</h4>
               <Link href="/about" className="text-gray-400 hover:text-white">
-                Our Story
+                My Story
               </Link>
             </div>
             <div>
@@ -32,15 +32,30 @@ export default function RootLayout({
               </Link>
               <Link
                 href="/articles"
-                className="text-gray-400 hover:text-white block"
+                className="text-gray-400 hover:text-white block mb-2"
               >
                 Articles
+              </Link>
+              <Link
+                href="/snippets"
+                className="text-gray-400 hover:text-white block mb-2"
+              >
+                Snippets
               </Link>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Support</h4>
-              <Link href="/contact" className="text-gray-400 hover:text-white">
+              <Link
+                href="/contact"
+                className="text-gray-400 hover:text-white block mb-2"
+              >
                 Contact Me
+              </Link>
+              <Link
+                href="/guestbook"
+                className="text-gray-400 hover:text-white block mb-2"
+              >
+                Guest Book
               </Link>
             </div>
             <div>

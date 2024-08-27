@@ -25,18 +25,22 @@ export default function Header() {
         </nav>
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? 'Close' : 'Menu'}
+            {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
           </button>
         </div>
       </div>
       {isOpen && (
         <nav className="md:hidden flex flex-col space-y-2 mt-4 px-4">
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/about" className="hover:underline">About</Link>
-          <Link href="/articles" className="hover:underline">Articles</Link>
-          <Link href="/contact" className="hover:underline">Contact</Link>
+          <Link href="/" className="hover:underline" onClick={() => setIsOpen(false)}>Home</Link>
+          <Link href="/about" className="hover:underline" onClick={() => setIsOpen(false)}>About</Link>
+          <Link href="/book" className="hover:underline" onClick={() => setIsOpen(false)}>Book</Link>
+          <Link href="/snippets" className="hover:underline" onClick={() => setIsOpen(false)}>Snippets</Link>
+          <Link href="/articles" className="hover:underline" onClick={() => setIsOpen(false)}>Articles</Link>
+          <Link href="/guestbook" className="hover:underline" onClick={() => setIsOpen(false)}>Guestbook</Link>
+          <Link href="/contact" className="hover:underline" onClick={() => setIsOpen(false)}>Contact</Link>
         </nav>
       )}
     </header>
   );
 }
+

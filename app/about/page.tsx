@@ -11,7 +11,8 @@ export default function AboutPage() {
 
       {/* Content Section */}
       <section className="container mx-auto py-12">
-        <h2 className="text-3xl font-bold mb-6">My Journey</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">My Journey</h2>
+        <div className="max-w-3xl mx-auto text-justified">
         <p className="text-lg text-gray-700 mb-6">
         Isaiah Munyaradzi Bizabani is a technology expert with a specialization in Generative AI, DevOps, and Cloud Computing. Over the years, he has transformed his passion for technology into a driving force for innovation and development, not only in the UK but also in his native Zimbabwe. As the visionary behind the Chisuma Technology Centre, Isaiah is dedicated to bridging the digital divide in Zimbabwe, ensuring that the benefits of cutting-edge technology are accessible to all.
         </p>
@@ -27,7 +28,8 @@ export default function AboutPage() {
         </p>
         <p className="text-lg text-gray-700 mb-6">
         As Isaiah continues to lead in the field of technology, he remains focused on his mission to contribute to the development of Zimbabwe and to inspire others to use technology as a tool for positive change. His journey is far from over, and with each new project and collaboration, Isaiah moves closer to realizing his vision of a more connected, equitable, and technologically advanced world.
-        </p>
+          </p>
+        </div>
       </section>
     </div>
   );

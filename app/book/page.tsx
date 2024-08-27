@@ -12,8 +12,8 @@ export default function BookPage() {
 
       {/* Content Section */}
       <section className="container mx-auto py-12">
-        <h2 className="text-3xl font-bold text-center mb-6">From Generative AI to Ubuntu: A Vision for Zimbabwe’s Technological Renaissance</h2>
-        <div className="max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-center mb-6">Exploring the Intersection of AI and African Values for Sustainable Growth</h2>
+        <div className="max-w-3xl mx-auto text-justified">
           <p className="text-lg text-gray-700 mb-6">
           In <strong>From Generative AI to Ubuntu: A Vision for Zimbabwe’s Technological Renaissance</strong>, Isaiah Munyaradzi Bizabani explores the transformative potential of merging cutting-edge technology with the deeply rooted African philosophy of Ubuntu. This groundbreaking work delves into how Generative AI can be harmonized with the principles of interconnectedness, community, and shared humanity to drive innovation, economic growth, and sustainable development across Africa.
           </p>
