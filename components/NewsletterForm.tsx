@@ -2,12 +2,12 @@
 
 "use client"; // Ensures the component is rendered on the client-side
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export default function NewsletterForm() {
-  const [formData, setFormData] = useState({ name: '', email: '' });
+  const [formData, setFormData] = useState({ name: "", email: "" });
   const [submitted, setSubmitted] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -15,13 +15,13 @@ export default function NewsletterForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
+      const response = await fetch("/api/send-email", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -30,13 +30,13 @@ export default function NewsletterForm() {
 
       if (result.success) {
         setSubmitted(true);
-        setFormData({ name: '', email: '' });
+        setFormData({ name: "", email: "" });
       } else {
-        setError('Failed to send email. Please try again.');
+        setError("Failed to send email. Please try again.");
       }
     } catch (err) {
-      console.error('Error:', err);
-      setError('An error occurred. Please try again.');
+      console.error("Error:", err);
+      setError("An error occurred. Please try again.");
     }
   };
 
@@ -45,7 +45,8 @@ export default function NewsletterForm() {
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold mb-4">Stay Updated</h2>
         <p className="text-xl mb-8">
-          Join our newsletter to stay informed about the latest insights and developments.
+          Join our newsletter to stay informed about the latest insights and
+          developments.
         </p>
         {submitted ? (
           <p className="text-green-200 text-center">
@@ -53,9 +54,7 @@ export default function NewsletterForm() {
           </p>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
-            {error && (
-              <p className="text-red-400 text-center mb-4">{error}</p>
-            )}
+            {error && <p className="text-red-400 text-center mb-4">{error}</p>}
             <div className="mb-4">
               <input
                 type="text"

@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST,
-        port: parseInt(process.env.SMTP_PORT || '587', 10),
+        port: parseInt(process.env.SMTP_PORT || '465', 10),
         secure: false,
         auth: {
           user: process.env.SMTP_USER,
